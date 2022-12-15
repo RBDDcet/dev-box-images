@@ -1,17 +1,17 @@
 # yaml-language-server: $schema=https://github.com/colbylwilliams/az-bake/releases/latest/download/bake.schema.json
 version: 1.0
 sandbox:
-  resourceGroup: contoso-sandbox
-  subscription: e5f715ae-6c72-4a5c-87c8-495590c34828
+  resourceGroup: TreyResearch_Sand
+  subscription: 572b41e6-5c44-486a-84d2-01d6202774ac
   location: eastus
-  virtualNetwork: contoso-sandbox-vnet
-  virtualNetworkResourceGroup: contoso-sandbox
+  virtualNetwork: TResearch-vnet
+  virtualNetworkResourceGroup: TreyResearch_Sand
   defaultSubnet: default
   builderSubnet: builders
-  keyVault: contoso-sandbox-kv0
-  storageAccount: contososandboxstorage0
-  identityId: /subscriptions/e5f715ae-6c72-4a5c-87c8-495590c34828/resourceGroups/contoso-sandbox/providers/Microsoft.ManagedIdentity/userAssignedIdentities/contoso-sandbox-id
+  keyVault: TResearch-kv
+  storageAccount: tresearchstorage
+  identityId: /subscriptions/572b41e6-5c44-486a-84d2-01d6202774ac/resourceGroups/TreyResearch_Sand/providers/Microsoft.ManagedIdentity/userAssignedIdentities/TResearch-id
 gallery:
-  name: contoso.gallery
-  resourceGroup: contoso-gallery
-  subscription: e5f715ae-6c72-4a5c-87c8-495590c34828
+  name: TreyResearchGallery
+  resourceGroup: TreyResearch_Images
+  subscription: 572b41e6-5c44-486a-84d2-01d6202774ac
