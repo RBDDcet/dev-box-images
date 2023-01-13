@@ -4,7 +4,7 @@ description: Windows 11 Enterprise + ActiveSetup
 publisher: Contoso
 offer: DevBox
 sku: win11-as
-version: 1.0.0
+version: 1.0.1
 os: Windows
 replicaLocations:
   - eastus
