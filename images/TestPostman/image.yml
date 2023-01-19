@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://github.com/colbylwilliams/az-bake/releases/latest/download/image.schema.json
+name: TestPostman
+description: Windows 11 Enterprise + PostMan
+publisher: Contoso
+offer: DevBox
+sku: win11-post
+version: 1.0.0
+os: Windows
+replicaLocations:
+  - eastus
+  - westeurope
+update: true
+base:
+  publisher: microsoftwindowsdesktop
+  offer: windows-ent-cpc
+  sku: win11-22h2-ent-cpc-m365
+  version: latest
+install:
+  choco:
+    packages:
+      - postman

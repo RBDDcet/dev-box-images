@@ -16,16 +16,6 @@ base:
   sku: win11-22h2-ent-cpc-m365
   version: latest
 install:
-  choco:
-    packages:
-      - googlechrome
-      - firefox
-      - git
-      - gh
-  scripts:
-    powershell:
-      - ../../scripts/Install-PsModules.ps1
-      - ../../scripts/Install-AzPsModule.ps1
-  activesetup:
+  ActiveSetup:
     commands:
-      - "notepad"
+      - "notepad.exe"
