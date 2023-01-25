@@ -18,4 +18,5 @@ base:
 install:
   choco:
     packages:
+      - git
       - postman
