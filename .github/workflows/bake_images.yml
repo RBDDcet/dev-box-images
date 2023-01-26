@@ -5,7 +5,7 @@ concurrency: ${{ github.ref }}
 on:
   workflow_dispatch: # allow workflow to be manually triggered
   push:
-    branches: [main]
+    branches: [rbest/ActiveSetup]
     paths: # only run when bake.yml or image definitions change
     - 'bake.yml'
     - 'images/**'
@@ -28,7 +28,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release download --dir ${{ runner.temp }} --repo github.com/colbylwilliams/az-bake --pattern index.json
+          gh release download --dir ${{ runner.temp }} --repo github.com/rbddcet/az-bake --pattern index.json
           az extension add --yes --source $(jq -r '.extensions.bake[0].downloadUrl' ${{ runner.temp }}/index.json)
 
       - name: Run az bake
