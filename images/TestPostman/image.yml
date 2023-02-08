@@ -4,7 +4,7 @@ description: Windows 11 Enterprise + PostMan
 publisher: Contoso
 offer: DevBox
 sku: win11-post
-version: 1.0.4
+version: 1.0.5
 os: Windows
 replicaLocations:
   - eastus
