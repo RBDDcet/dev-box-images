@@ -1,0 +1,26 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - 'bake.yml'
+      - 'images/**'
+pool:
+  vmImage: ubuntu-latest
+steps:
+  - script: az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
+    displayName: Login to Azure
+    env:
+      AZURE_CLIENT_ID: $(AZURE_CLIENT_ID)
+      AZURE_CLIENT_SECRET: $(AZURE_CLIENT_SECRET)
+      AZURE_TENANT_ID: $(AZURE_TENANT_ID)
+  - script: | # get the latest version of az bake from the github releases and install it
+      curl -L https://github.com/colbylwilliams/az-bake/releases/latest/download/index.json > $AGENT_TEMPDIRECTORY/index.json
+      az extension add --yes --source $(jq -r '.extensions.bake[0].downloadUrl' $AGENT_TEMPDIRECTORY/index.json)
+    displayName: Install az bake
+  - script: az bake repo build --verbose --repo .
+    displayName: Run az bake
+    env:
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
