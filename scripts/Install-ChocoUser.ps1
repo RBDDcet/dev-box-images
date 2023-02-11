@@ -34,10 +34,16 @@ function Show-Notification {
     $Toast = [Windows.UI.Notifications.ToastNotification]::new($SerializedXml)
     $Toast.Tag = "AZBake"
     $Toast.Group = "AZBake"
-    $Toast.ExpirationTime = [DateTimeOffset]::Now.AddMinutes(2)
+    $Toast.ExpirationTime = [DateTimeOffset]::Now.AddMinutes(1)
 
     $Notifier = [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier("AZBake")
     $Notifier.Show($Toast);
+}
+
+
+if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Start-Process PowerShell -WindowStyle Hidden -Verb RunAs "-NoProfile -ExecutionPolicy Bypass -Command `"cd '$pwd'; & '$PSCommandPath';`"";
+    exit;
 }
 
 #Check if folder exists
@@ -73,4 +79,3 @@ else {
     Show-Notification -ToastTitle $toastTitle -ToastText "$PackageId already installed."
     Add-Content -Path $log -Value "${$PackageId} already installed: $(Get-Date)"
 }
-
