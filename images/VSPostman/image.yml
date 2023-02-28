@@ -1,23 +1,23 @@
 # yaml-language-server: $schema=https://github.com/colbylwilliams/az-bake/releases/latest/download/image.schema.json
-name: VS2022Box
-description: Windows 11 Enterprise + M365 Apps + VS2022
+name: TestPostman
+description: Windows 11 Enterprise + PostMan
 publisher: Contoso
 offer: DevBox
-sku: win11-vs2022
-version: 1.0.1
+sku: win11-post
+version: 1.1.0
 os: Windows
 replicaLocations:
   - eastus
   - westeurope
 update: true
 base:
-  publisher: microsoftvisualstudio
-  offer: visualstudioplustools
-  sku: vs-2022-ent-general-win11-m365-gen2
+  publisher: microsoftwindowsdesktop
+  offer: windows-ent-cpc
+  sku: win11-22h2-ent-cpc-m365
   version: latest
 install:
   choco:
     packages:
-      - googlechrome
-      - firefox
-      - gh
+      - git
+      - postman
+      - vscode

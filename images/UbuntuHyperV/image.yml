@@ -4,7 +4,7 @@ description: Windows 11 Enterprise + Hyper-V - Nested Ubuntu
 publisher: Contoso
 offer: DevBox
 sku: win11-hv
-version: 1.0.0
+version: 1.0.1
 os: Windows
 replicaLocations:
   - eastus
