@@ -25,8 +25,8 @@ The following software is installed on all images. Use [this form](/../../issues
 ---
 
 ## Usage 
-#####- [Github specific specific](#to-get-started---github)
-#####- [Azure DevOps specific directions](#to-get-started---azure-devops)
+- [Github specific specific](#to-get-started---github)
+- [Azure DevOps specific directions](#to-get-started---azure-devops)
 
 ---
 ### ___To get started - Github___
