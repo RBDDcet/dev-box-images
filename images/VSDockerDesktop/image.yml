@@ -11,13 +11,14 @@ replicaLocations:
   - westeurope
 update: true
 base:
-  publisher: microsoftvisualstudio
-  offer: visualstudioplustools
-  sku: vs-2022-ent-general-win11-m365-gen2
+  publisher: microsoftwindowsdesktop
+  offer: windows-ent-cpc
+  sku: win11-22h2-ent-cpc-m365
   version: latest
 install:
   choco:
     packages:
       - googlechrome
       - gh
+      - vscode
       - docker-desktop
