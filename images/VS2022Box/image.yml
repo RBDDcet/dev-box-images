@@ -18,6 +18,5 @@ base:
 install:
   choco:
     packages:
-      - googlechrome
       - firefox
       - gh

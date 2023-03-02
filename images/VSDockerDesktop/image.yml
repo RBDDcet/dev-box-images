@@ -19,6 +19,5 @@ install:
   choco:
     packages:
       - googlechrome
-      - firefox
       - gh
       - docker-desktop
