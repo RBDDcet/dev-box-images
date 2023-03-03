@@ -15,3 +15,7 @@ base:
   offer: visualstudioplustools
   sku: vs-2022-ent-general-win11-m365-gen2
   version: latest
+install:
+  scripts:
+    powershell:
+      - ../../scripts/Install-VSCode.ps1
