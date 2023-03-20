@@ -4,7 +4,7 @@ description: Windows 11 Enterprise + M365 Apps + VS2022
 publisher: Contoso
 offer: DevBox
 sku: win11-vsdd
-version: 1.2.0
+version: 1.2.1
 os: Windows
 replicaLocations:
   - eastus

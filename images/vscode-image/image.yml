@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=https://github.com/colbylwilliams/az-bake/releases/latest/download/image.schema.json
 name: vscode-image
-version: 1.2.0
+version: 1.2.1
 description: A description for vscode-image
 publisher: MyCompany
 offer: DevBox
